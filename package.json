@@ -1,7 +1,7 @@
 {
     "name": "svg_logo_maker",
     "version": "1.0.0",
-    "description": "Makes SVG files using inquirer",
+    "description": "Makes SVG files",
     "main": "index.js",
     "scripts": {
       "start": "node index.js",

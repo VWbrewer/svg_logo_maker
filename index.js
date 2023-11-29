@@ -11,7 +11,7 @@ console.log("The logo is able to be made")
 function writeToFile(fileName, input) {
     // This file starts as an empty string
     let svgString = "";
-    svgString = '<svg version="1.1" width="300" height="300" xmlns="http://www.w3.org/2000/svg">';
+    svgString = '<svg version="2" width="300" height="200" xmlns="http://www.w3.org/2000/svg">';
     svgString += "<g>";
     svgString += `${input.shape}`;
 
@@ -22,15 +22,15 @@ function writeToFile(fileName, input) {
         svgString += `<circle cx="150" cy="100" r="80" fill="${input.shapeColor}"/>`;
 
     } else if (input.shape === "Square") {
-        shapeChoice = new Square();
+        shapeChoice = new Square ();
         svgString += `<rect x="90" y="40" width="120" height="120" fill="${input.shapeColor}"/>`;
 
     } else {
-        shapeChoice = new Triangle();
+        shapeChoice = new Triangle ();
         svgString += `<polygon points="150, 18 244, 182 56, 182" fill="${input.shapeColor}"/>`;
 }
 
-svgString += `<text x="150" y="150" text-anchor="middle" font-size="45" fill="${input.textColor}">${input.text}</text>`;
+svgString += `<text x="150" y="100" text-anchor="middle" font-size="50" fill="${input.textColor}">${input.text}</text>`;
 svgString += "</g>";
 svgString += "</svg>";
 
@@ -84,6 +84,4 @@ function promptUser() {
 }
 
 
-
-// Calling promptUser function
 promptUser();
